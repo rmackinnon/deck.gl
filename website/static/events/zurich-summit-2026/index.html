@@ -9,10 +9,66 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800|Open+Sans:400,600,700" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
         <style type="text/css">
+            .header_ribbon {
+                display: flex;
+                position: fixed;
+                top: 0px;
+                z-index: 999;
+                height: fit-content;
+                width: 100%;
+                color: white;
+                font-family: UberMove, Helvetica, Arial, sans-serif;
+                height: 3vh;
+                width: 100%;
+                padding: 0.4vh 0.4vh 0.4vh 0.4vh;
+                background-color: rgba(0,0,0, 0.8);
+                align-content: center;
+            }
+            .header_ribbon img {
+                width: 32px;
+                height: 32px;
+            }
+            .header_ribbon a {
+                color: white;
+                font-weight: normal;
+                cursor: pointer;
+                text-decoration: none !important;
+            }
+            .header_text {
+                padding-left: 1vh;
+                height:100%;
+                width: 100%;
+                vertical-align: middle;
+                align-content: center;
+                font-size: 1em;
+                font-weight: 400;
+            }
+            @media (max-width:800px) {
+                .header_ribbon {
+                    height: 5vh;
+                }
+                .header_text {
+                    font-size: 1.4em;
+                }
+            }
+            @media (max-width:400px) {
+                .header_ribbon {
+                    height: 5.5vh;
+                }
+            }
+            @media (max-width:360px) {
+                .header_ribbon {
+                    height: 5vh;
+                }
+            }
         </style>
     </head>
     
     <body class="is-bgWhite" cz-shortcut-listen="true">
+        <header class="header_ribbon" style="">
+            <a href="https://deck.gl"><img src="https://deck.gl/images/visgl-logo-light.png" alt="vis.gl Logo"></a>
+            <div class="header_text"><a href="https://deck.gl">deck.gl</a></div>
+        </header>
         <header class="section">
            <img class="header_bg_img" width="100%" height="100%" srcset="https://raw.githubusercontent.com/visgl/deck.gl-data/master/events/zurich-summit-2026/header_bg_800.jpg 800w, https://raw.githubusercontent.com/visgl/deck.gl-data/master/events/zurich-summit-2026/header_bg_1200.jpg 1200w, https://raw.githubusercontent.com/visgl/deck.gl-data/master/events/zurich-summit-2026/header_bg_2400.jpg 2400w" style="object-fit: cover" />
            <div class="header" style="width:100%;height:100%;" >
@@ -61,8 +117,7 @@
                         At the Open Visualization Collaborator Summit, we’ll bring together an international audience of developers to discuss how they are using open-source tools to build applications for geospatial analysis, biological research, AI training, and beyond.
                         Our goal is to foster collaboration, encourage contributions, and shape the future of open-source visualization across disciplines.
                     </p>
-                    <p class="u-mt24 u-mb80 u-mb48--tablet button-gl">RESISTRATION OPENING SOON!</p>
-                    <!-- a href="{reglink}" class="u-mt24 u-mb80 u-mb48--tablet button-gl">REGISTER NOW</a-->
+                    <a href="https://linuxfoundation.regfox.com/openvis-zurich-2026-collaborator-summit" class="u-mt24 u-mb80 u-mb48--tablet button-gl">REGISTER NOW</a>
                 </div>
         
                 <div class="grid grid-cell--col12 u-mt120 u-mt80--tablet u-justify-center">
